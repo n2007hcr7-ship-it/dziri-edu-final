@@ -6,7 +6,9 @@ import Register from './pages/Register';
 import Courses from './pages/Courses';
 import Groups from './pages/Groups';
 import Payment from './pages/Payment'; // تأكد من استيراد صفحة الدفع
-
+import Offline from './pages/Offline';
+import Wallet from './pages/Wallet';
+import Profile from './pages/Profile';
 export default function App() {
   return (
     <Router>
@@ -23,7 +25,10 @@ export default function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/groups" element={<Groups />} />
-          
+          {/* صفحات إضافية */}
+<Route path="/offline" element={<Offline />} />
+<Route path="/wallet" element={<Wallet />} />
+<Route path="/profile" element={<Profile />} />
           {/* في حال كتابة رابط خاطئ، يعود للرئيسية */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
